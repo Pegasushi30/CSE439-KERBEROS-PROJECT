@@ -1,9 +1,11 @@
-DESIGN EXPLANATION
-This project facilitates user authentication to access services from servers. Upon correct
+                                  DESIGN EXPLANATION
+***********************************************************************************************                             
+  This project facilitates user authentication to access services from servers. Upon correct
 credentials verification, users receive a Ticket Granting Ticket (TGT) from the server. Using
 this TGT, a user can request a ticket from the server, enabling them to access the requested
 services.
-Both client and server sides are designed to securely transmit login credentials using RSA
+
+  Both client and server sides are designed to securely transmit login credentials using RSA
 symmetric key encryption. During user authentication, the server compares the provided
 credentials with data stored in an SQLite3 database. If there is a match, authentication is
 granted; otherwise, it is denied. Once authenticated, a user can request a TGT, and with this
@@ -16,3 +18,6 @@ used for encrypting tickets. The server possesses three keys: two RSA keys, whic
 and public RSA keys serving for symmetric encryption, and another private key used by the
 server for encrypting tickets. An admin user has the authority to update this key for ticket
 encryption.
+***********************************************************************************************
+![image](https://github.com/Pegasushi30/CSE439-KERBEROS-PROJECT/assets/121224269/15b8abe9-ba8b-4971-ba6f-ce159047c24b)
+
